@@ -1,0 +1,39 @@
+---
+- name: Get node version list
+  ansible.builtin.command:
+    cmd: >-
+      kubectl get nodes -o=jsonpath='{.items[*].status.nodeInfo.kubeletVersion}'
+  register: kubernetes_node_versions
+  delegate_to: "{{ groups['kubernetes_control_plane'][0] }}"
+  failed_when: false
+  changed_when: false
+
+- name: Check if upgrade needs planning
+  ansible.builtin.set_fact:
+    initial_upgrade: "{{ kubeadm_upgrade_kubernetes_version not in kubernetes_node_versions.stdout }}"
+
+- name: Plan upgrade
+  when: initial_upgrade
+  ansible.builtin.command:
+    cmd: >-
+      kubeadm upgrade plan
+  register: kubeadm_upgrade_plan
+  changed_when: kubeadm_upgrade_plan.rc == 0
+
+- name: Upgrade first node
+  when: initial_upgrade
+  ansible.builtin.command:
+    cmd: >-
+      timeout -k 600s 600s
+      kubeadm upgrade apply -y {{ kubeadm_upgrade_kubernetes_version }}
+  register: kubeadm_upgrade_apply
+  changed_when: kubeadm_upgrade_apply.rc == 0
+
+- name: Upgrade node
+  when: not initial_upgrade
+  ansible.builtin.command:
+    cmd: >-
+      timeout -k 600s 600s
+      kubeadm upgrade node
+  register: kubeadm_upgrade_node
+  changed_when: kubeadm_upgrade_node.rc == 0

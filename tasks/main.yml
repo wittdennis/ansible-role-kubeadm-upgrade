@@ -1,2 +1,15 @@
 ---
-# tasks file for role_remplate
+- name: Get current kubernetes version
+  ansible.builtin.command:
+    cmd: >-
+      kubectl get node {{ kubernetes_node_name | default(inventory_hostname) }}
+        -o jsonpath='{ .status.nodeInfo.kubeletVersion }'
+  register: current_kubernetes_version
+  delegate_to: "{{ groups['kubernetes_control_plane'][0] }}"
+  failed_when: false
+  changed_when: false
+
+- name: Upgrade node
+  when: current_kubernetes_version.stdout != kubeadm_upgrade_kubernetes_version
+  ansible.builtin.include_tasks:
+    file: upgrade.yml
