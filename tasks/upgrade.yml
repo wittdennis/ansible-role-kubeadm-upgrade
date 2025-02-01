@@ -1,3 +1,4 @@
+# code: language=ansible
 ---
 - name: Get node version list
   ansible.builtin.command:
@@ -25,7 +26,9 @@
   ansible.builtin.command:
     cmd: >-
       timeout -k 600s 600s
-      kubeadm upgrade apply -y {{ kubeadm_upgrade_kubernetes_version }}
+      kubeadm upgrade apply -y
+      {{ kubeadm_upgrade_skip_phases | ternary('skip-phase=', '') }}{{ kubeadm_upgrade_skip_phases | ternary(kubeadm_upgrade_skip_phases | join(','), '') }}
+      {{ kubeadm_upgrade_kubernetes_version }}
   register: kubeadm_upgrade_apply
   changed_when: kubeadm_upgrade_apply.rc == 0
 
@@ -35,5 +38,6 @@
     cmd: >-
       timeout -k 600s 600s
       kubeadm upgrade node
+      {{ kubeadm_upgrade_skip_phases | ternary('skip-phase=', '') }}{{ kubeadm_upgrade_skip_phases | ternary(kubeadm_upgrade_skip_phases | join(','), '') }}
   register: kubeadm_upgrade_node
   changed_when: kubeadm_upgrade_node.rc == 0
