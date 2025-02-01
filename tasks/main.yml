@@ -1,3 +1,4 @@
+# code: language=ansible
 ---
 - name: Get current kubernetes version
   ansible.builtin.command:
