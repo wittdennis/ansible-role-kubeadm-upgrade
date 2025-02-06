@@ -5,6 +5,8 @@ on:
 
 jobs:
   release:
-    uses: wittdennis/.github/.github/workflows/cog-release.yaml@master
+    uses: wittdennis/pipelines/.github/workflows/cog-release.yaml@1.5.0
+    with:
+      check-latest-tag-only: true
     secrets:
       release-token: ${{ secrets.RELEASE_TOKEN }}
