@@ -2,6 +2,19 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.1](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/compare/df96293c53ba7469b897dfb082ae36029e7e608c..1.1.1) - 2025-02-13
+#### Bug Fixes
+- correctly set skip-phase argument - ([3f65d15](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/3f65d151f8436c824329228bf34f45312281c3bd)) - Dennis Witt
+#### Continuous Integration
+- **(deps)** update wittdennis/pipelines action to v1.8.1 - ([daed394](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/daed39488a714dc4857207dd5ea8c69b9e060990)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.8.0 - ([a033ca4](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/a033ca453a2e24f47db4e4d7ce936e0fb9c73bf1)) - wittdennis-renovate[bot]
+- change to use reusable workflows - ([cb591d1](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/cb591d11cd3a8c8f6a7fe877090a2e0e354ec4df)) - Dennis Witt
+#### Miscellaneous Chores
+- **(deps)** update dependency kubernetes/kubernetes to v1.32.2 - ([e51587b](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/e51587b1b38a49f290c1bb5953c7d53e8beaab5e)) - wittdennis-renovate[bot]
+- **(deps)** update pre-commit hook ansible-community/ansible-lint to v25.1.2 - ([df96293](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/df96293c53ba7469b897dfb082ae36029e7e608c)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.0](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/compare/d4ab71e8d8bf4bc8826f5183e3b844c5467f3c3d..1.1.0) - 2025-02-01
 #### Continuous Integration
 - **(deps)** update softprops/action-gh-release action to v2.2.1 - ([b73a111](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/b73a111c30abb39de332e1a96ada1407a40953b6)) - wittdennis-renovate[bot]
