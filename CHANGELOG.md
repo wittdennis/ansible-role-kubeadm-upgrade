@@ -2,6 +2,56 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.2.0](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/compare/af76a56f17ee27353fd3b104f35ad07806b5a23c..1.2.0) - 2025-07-18
+#### Continuous Integration
+- **(deps)** update wittdennis/pipelines action to v1.11.8 - ([9866f7f](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/9866f7f197b83d5fa51caa4a80b0b44d72f60068)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.7 - ([440c1a2](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/440c1a235e86291ecce2264153720216fcd8ff24)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.6 - ([44f63b0](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/44f63b07a2d0f9cc2715b2d749f7421a7d3c4331)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.5 - ([dd9d601](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/dd9d60145f408cabbc25e62e210759705e3609ef)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.4 - ([2ae5fd1](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/2ae5fd15ef8bf6a3239aa142c3f323d653cdbe3e)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.3 - ([fad163d](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/fad163dde8ed2d2ecdbb3494183716421c974ef7)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.2 - ([43be0fd](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/43be0fd135ee0ac06609244353c892c3b7a37c70)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.1 - ([4849fb1](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/4849fb1f1d2aa29b4e573368db1955a0248f5900)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.0 - ([908e449](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/908e44982323f117eabbfb5b20eac9bbf0662081)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.10.2 - ([b385f65](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/b385f65e437bb182d17539ac8ff58115768b8695)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.10.1 - ([539cd95](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/539cd9536e6ee74d401ecce18145741276177e16)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.8.2 - ([af76a56](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/af76a56f17ee27353fd3b104f35ad07806b5a23c)) - wittdennis-renovate[bot]
+#### Features
+- copy updated certificates after upgrade - ([d7f28fb](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/d7f28fb7789a21e9282975a5978f6c6b996ae2ed)) - Dennis Witt
+#### Miscellaneous Chores
+- **(deps)** update dependency kubernetes/kubernetes to v1.33.3 - ([aa6a6f7](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/aa6a6f7e06eec6427e721e71e8f922b51a71d656)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.27 - ([851834a](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/851834a47866c105f3e9c7f606b22477a3c8ee38)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.26 - ([10cbb8b](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/10cbb8b70ef1c30acdb315649babe4ba78cce71c)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.25 - ([c009823](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/c009823ba8cbb36ab2a66358e9f37452bda61018)) - wittdennis-renovate[bot]
+- **(deps)** update dependency kubernetes/kubernetes to v1.33.2 - ([4481617](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/4481617b5277870fd39a5b30c5ce165445118864)) - wittdennis-renovate[bot]
+- **(deps)** update pre-commit hook ansible-community/ansible-lint to v25.6.1 - ([aaf4e48](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/aaf4e48cc6335889a50becf5a00f472c8ede9ec3)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.24 - ([d594c44](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/d594c444f4c435e5b3e51cf45ff29b905af16110)) - wittdennis-renovate[bot]
+- **(deps)** update pre-commit hook ansible-community/ansible-lint to v25.6.0 - ([28ccced](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/28ccced5d1031e15ca389e83461c0edf12c813ad)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.23 - ([5710b3c](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/5710b3ca369faede562da4f4c4190e57141c4fe8)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.22 - ([0ec56d0](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/0ec56d0a304fa4efdafec702cdb54f1557fb5ee9)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.20 - ([9cd2201](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/9cd22018986ba53a16f40d9d4dbeec9068b43672)) - wittdennis-renovate[bot]
+- **(deps)** update pre-commit hook ansible-community/ansible-lint to v25.5.0 - ([1c154b4](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/1c154b4cd3d7047f6187f5f6775901764ae347d5)) - wittdennis-renovate[bot]
+- **(deps)** update dependency kubernetes/kubernetes to v1.33.1 - ([4197fc9](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/4197fc98f750421268bbb43d5ddc860d81c77370)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.19 - ([49fd579](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/49fd5799ac3f1de17ef5b3bc7a4e78a1f86be0ec)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.18 - ([531523b](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/531523bd14a64424338ac0c5274046c7f631bb2e)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.17 - ([15a728f](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/15a728f3fd154bec8322759379a0dee1ced33170)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.16 - ([e90c44c](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/e90c44c7fe3b0d193c7ddeda3159753e81032929)) - wittdennis-renovate[bot]
+- **(deps)** update pre-commit hook ansible-community/ansible-lint to v25.4.0 - ([8edb7c9](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/8edb7c95a9793883e3ec1fa9f31285cff00abe65)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.15 - ([d552fa7](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/d552fa75ae50b956f09d4929bdcf29f5ece049a8)) - wittdennis-renovate[bot]
+- **(deps)** update dependency kubernetes/kubernetes to v1.33.0 - ([39e8637](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/39e8637fab4e67d1d2ef4ebd9d90612f6d2d97f0)) - wittdennis-renovate[bot]
+- **(deps)** update dependency kubernetes/kubernetes to v1.32.4 - ([5fda618](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/5fda618847a660e4d8f01531598cb99465016a98)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.14 - ([18d75d2](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/18d75d27b20fded7b382bef2132fecc73679c994)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.13 - ([35cfbe4](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/35cfbe4832ffc680091416e784f6e87ed6a3e86d)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.12 - ([8069b9b](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/8069b9bca1efef668ffca8cd20c48b5962f7fa87)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.10 - ([fe1d513](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/fe1d513435d344dabe8c2e3400df0ba11572b04b)) - wittdennis-renovate[bot]
+- **(deps)** update pre-commit hook ansible-community/ansible-lint to v25.2.1 - ([91953fb](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/91953fb6504567964561c562fd695519d73992e5)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.9 - ([f007c08](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/f007c0816c8e6af78b40e65aef40c1c8f1174286)) - wittdennis-renovate[bot]
+- **(deps)** update pre-commit hook ansible-community/ansible-lint to v25.2.0 - ([65805b3](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/65805b3215e4cb9e567dd1691dece076da4068a0)) - wittdennis-renovate[bot]
+- **(deps)** update dependency kubernetes/kubernetes to v1.32.3 - ([cd585a0](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/cd585a0fdbf1e72d3e15ebe39e647155b0ac92ce)) - wittdennis-renovate[bot]
+- **(deps)** update pre-commit hook ansible-community/ansible-lint to v25.1.3 - ([e827526](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/e827526967adae4a8cefd8af398f84ece2c96ecc)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.1](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/compare/df96293c53ba7469b897dfb082ae36029e7e608c..1.1.1) - 2025-02-13
 #### Bug Fixes
 - correctly set skip-phase argument - ([3f65d15](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/3f65d151f8436c824329228bf34f45312281c3bd)) - Dennis Witt
