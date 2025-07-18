@@ -32,6 +32,83 @@
   register: kubeadm_upgrade_apply
   changed_when: kubeadm_upgrade_apply.rc == 0
 
+- name: Retrieve updated certificates from upgraded control plane
+  when: initial_upgrade and kubeadm_upgrade_apply.rc == 0
+  block:
+    - name: Fetch CA cert
+      ansible.builtin.fetch:
+        src: /etc/kubernetes/pki/ca.crt
+        dest: /tmp/kubernetes/pki/ca.crt
+        flat: true
+
+    - name: Fetch CA private key
+      ansible.builtin.fetch:
+        src: /etc/kubernetes/pki/ca.key
+        dest: /tmp/kubernetes/pki/ca.key
+        flat: true
+
+    - name: Fetch sa cert
+      ansible.builtin.fetch:
+        src: /etc/kubernetes/pki/sa.pub
+        dest: /tmp/kubernetes/pki/sa.pub
+        flat: true
+
+    - name: Fetch sa private key
+      ansible.builtin.fetch:
+        src: /etc/kubernetes/pki/sa.key
+        dest: /tmp/kubernetes/pki/sa.key
+        flat: true
+
+    - name: Fetch front-proxy CA cert
+      ansible.builtin.fetch:
+        src: /etc/kubernetes/pki/front-proxy-ca.crt
+        dest: /tmp/kubernetes/pki/front-proxy-ca.crt
+        flat: true
+
+    - name: Fetch front-proxy CA private key
+      ansible.builtin.fetch:
+        src: /etc/kubernetes/pki/front-proxy-ca.key
+        dest: /tmp/kubernetes/pki/front-proxy-ca.key
+        flat: true
+
+    - name: Fetch etcd CA cert
+      ansible.builtin.fetch:
+        src: /etc/kubernetes/pki/etcd/ca.crt
+        dest: /tmp/kubernetes/pki/etcd/ca.crt
+        flat: true
+
+    - name: Stat etcd CA private key
+      register: ca_private_key
+      ansible.builtin.stat:
+        path: /etc/kubernetes/pki/etcd/ca.key
+
+    - name: Fetch etcd CA private key
+      when: ca_private_key.stat.exists
+      ansible.builtin.fetch:
+        src: /etc/kubernetes/pki/etcd/ca.key
+        dest: /tmp/kubernetes/pki/etcd/ca.key
+        flat: true
+
+- name: Copy certificates to control planes
+  when: not initial_upgrade and inventory_hostname in groups["kubernetes_control_plane"]
+  ansible.builtin.copy:
+    src: /tmp/kubernetes/
+    dest: /etc/kubernetes/
+    mode: "0644"
+    owner: root
+    group: root
+    force: true
+    directory_mode: "0755"
+
+- name: Cleanup local certificate tmp files
+  delegate_to: localhost
+  run_once: true
+  become: false
+  when: inventory_hostname in groups["kubernetes_worker"]
+  ansible.builtin.file:
+    path: /tmp/kubernetes
+    state: absent
+
 - name: Upgrade node
   when: not initial_upgrade
   ansible.builtin.command:
