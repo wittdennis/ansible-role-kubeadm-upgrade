@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.3.0](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/compare/5d1d3cecce8db582f3b73caac11633d9de9a1cac..1.3.0) - 2025-07-18
+#### Features
+- **(revert)** copy updated certificates after upgrade - ([5d1d3ce](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/5d1d3cecce8db582f3b73caac11633d9de9a1cac)) - Dennis Witt
+
+- - -
+
 ## [1.2.0](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/compare/af76a56f17ee27353fd3b104f35ad07806b5a23c..1.2.0) - 2025-07-18
 #### Continuous Integration
 - **(deps)** update wittdennis/pipelines action to v1.11.8 - ([9866f7f](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/9866f7f197b83d5fa51caa4a80b0b44d72f60068)) - wittdennis-renovate[bot]
