@@ -5,7 +5,7 @@ on:
 
 jobs:
   release:
-    uses: wittdennis/pipelines/.github/workflows/cog-release.yaml@1.11.27
+    uses: wittdennis/pipelines/.github/workflows/cog-release.yaml@1.11.28
     with:
       check-latest-tag-only: true
     secrets:
