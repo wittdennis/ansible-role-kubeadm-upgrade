@@ -28,4 +28,4 @@ owner = "wittdennis"
 
 [bump_profiles]
 
-[packages]
+[monorepo.packages]
