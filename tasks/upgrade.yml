@@ -15,6 +15,7 @@
 
 - name: Plan upgrade
   when: initial_upgrade
+  become: true
   ansible.builtin.command:
     cmd: >-
       kubeadm upgrade plan
@@ -23,6 +24,7 @@
 
 - name: Upgrade first node
   when: initial_upgrade
+  become: true
   ansible.builtin.command:
     cmd: >-
       timeout -k 600s 600s
@@ -34,6 +36,7 @@
 
 - name: Upgrade node
   when: not initial_upgrade
+  become: true
   ansible.builtin.command:
     cmd: >-
       timeout -k 600s 600s
