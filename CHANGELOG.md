@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.3.2](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/compare/f7f76dc19dcf01fae0605a567af152ca8795c5e4..1.3.2) - 2026-11-26
+#### Bug Fixes
+- set become for tasks that need it - ([f7f76dc](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/f7f76dc19dcf01fae0605a567af152ca8795c5e4)) - Dennis Witt
+
+- - -
+
 ## [1.3.1](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/compare/dd570e102f75b11c78d2796e9af9088513213df7..1.3.1) - 2026-11-26
 #### Bug Fixes
 - set become for tasks that need it - ([ea198d4](https://github.com/wittdennis/ansible-role-kubeadm-upgrade/commit/ea198d4b28877ca627a79660ac670089b5c28a51)) - Dennis Witt
